@@ -4,7 +4,7 @@
       "key": "2026-07",
       "label": "luglio 2026",
       "file": "../../data/history/2026-07.json",
-      "count": 184
+      "count": 185
     },
     {
       "key": "2026-06",
@@ -759,6 +759,7 @@
     "finanza-20260601-il-capitale-torna-selettivo-ecb-consumer-expectations-survey-july-3b8c3403a5": "2026-06",
     "geopolitica-20260601-il-rischio-geopolitico-si-allarga-iran-us-gulf-ed0b9d8231": "2026-06",
     "finanza-20260601-il-capitale-torna-selettivo-isabel-schnabel-from-mercato-c5d37d9f74": "2026-06",
+    "geopolitica-20260728-il-rischio-geopolitico-si-allarga-people-japan-c1d05e4355": "2026-07",
     "geopolitica-20260728-il-rischio-geopolitico-si-allarga-spain-france-bordeaux-1f14118e53": "2026-07",
     "startup-20260728-il-venture-sceglie-con-pi-durezza-cursor-india-spacex-34a9e401c6": "2026-07",
     "geopolitica-20260727-il-rischio-geopolitico-si-allarga-wildfire-french-bordeaux-9c7ca5b3fa": "2026-07",
@@ -818,7 +819,7 @@
     "startup-20260721-il-venture-sceglie-con-pi-durezza-colossal-biosciences-20b-30b-47ed3878e7": "2026-07",
     "startup-20260721-il-venture-sceglie-con-pi-durezza-natural-30m-ai-agenti-stripe-ebc9748ad3": "2026-07",
     "geopolitica-20260720-il-rischio-geopolitico-si-allarga-yemen-s-houthis-saudi-arabia-bf85756185": "2026-07",
-    "startup-20260720-il-venture-sceglie-con-pi-durezza-inference-startup-infinity-15m-touri-e0b67e2f5a": "2026-07"720-il-venture-sceglie-con-pi-durezza-inference-startup-infinity-15m-touri-e0b67e2f5a": "2026-07",
+    "startup-20260720-il-venture-sceglie-con-pi-durezza-inference-startup-infinity-15m-touri-e0b67e2f5a": "2026-07",
     "geopolitica-20260720-il-rischio-geopolitico-si-allarga-ten-russian-black-sea-da2c8655ad": "2026-07",
     "startup-20260720-il-venture-sceglie-con-pi-durezza-strictlyvc-new-york-city-september-d9ac325ced": "2026-07",
     "geopolitica-20260720-il-rischio-geopolitico-si-allarga-trump-us-iran-american-25bd62599e": "2026-07",
@@ -941,4 +942,7 @@
     "startup-20260702-il-venture-sceglie-con-pi-durezza-bending-spoons-saas-cdf01ef4a0": "2026-07",
     "ai-20260702-l-ai-esce-dalla-demo-the-ultime-mosse-ai-novit-june-ceff5a9bd3": "2026-07",
     "startup-20260701-il-venture-sceglie-con-pi-durezza-autonomous-humble-robotics-b9b4f1408c": "2026-07",
-    "finanza-20260701-il-capitale-torna-selettivo-fed-warsh-says-inflation-poses-edfb8f8d85": "2026-07"
+    "finanza-20260701-il-capitale-torna-selettivo-fed-warsh-says-inflation-poses-edfb8f8d85": "2026-07",
+    "geopolitica-20260701-il-rischio-geopolitico-si-allarga-trump-75c91d66fe": "2026-07"
+  }
+}
