@@ -4,7 +4,7 @@
 
 Canonical site: https://nexus.universalis.it/site/
 Publisher: Universalis Produzioni
-Last edition update: 2026-07-28T11:00:00+02:00
+Last edition update: 2026-07-28T13:00:00+02:00
 
 ## Primary URLs
 
@@ -35,11 +35,11 @@ Last edition update: 2026-07-28T11:00:00+02:00
 
 ## Current Edition Stories
 
-- [Nuove ondate di caldo spingono gli incendi verso Bordeaux](https://nexus.universalis.it/site/stories/geopolitica-20260728-il-rischio-geopolitico-si-allarga-spain-france-bordeaux-1f14118e53.html)
+- [Un forte terremoto in Giappone intrappola persone in un centro commerciale](https://nexus.universalis.it/site/stories/geopolitica-20260728-il-rischio-geopolitico-si-allarga-people-japan-c1d05e4355.html)
   - Category: Geopolitica
   - Source: BBC
-  - Published/updated: 2026-07-28T06:51:27+02:00
-  - Summary: La BBC riferisce che Francia e Spagna si preparano a nuove ondate di caldo oltre i quaranta gradi mentre un incendio nella Gironda resta a circa quindici chilometri da Bordeaux.
+  - Published/updated: 2026-07-28T12:44:50+02:00
+  - Summary: La BBC riferisce che un terremoto di magnitudo 7,1 nel sud-ovest del Giappone ha provocato crolli, incendi, interruzioni dei trasporti e ordini di evacuazione per oltre 150 mila persone.
 - [Oltre 600 militari statunitensi feriti dall'inizio della guerra con l'Iran](https://nexus.universalis.it/site/stories/geopolitica-20260727-il-rischio-geopolitico-si-allarga-more-us-iran-war-february-1f8dc90c6d.html)
   - Category: Geopolitica
   - Source: BBC

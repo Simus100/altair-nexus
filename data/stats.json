@@ -1,17 +1,17 @@
 {
-  "editionUpdatedAt": "2026-07-28T11:00:00+02:00",
+  "editionUpdatedAt": "2026-07-28T13:00:00+02:00",
   "newsGeneratedToday": 8,
   "sourcesAnalyzed": 155,
   "topicEmerging": [
-    "Alle 11:00 l'edizione resta a 8 storie dopo l'analisi di 155 fonti e 6 candidati: non emerge una sostituzione che migliori insieme freschezza, solidità e rilevanza del blocco live.",
-    "Le tre varianti Google da Galaxy Unpacked sono già rappresentate dalla scheda su Gemini nei nuovi Galaxy; usarle anche in tecnologia o futuro renderebbe l'edizione ridondante.",
-    "Il discorso BCE di Philip Lane non entra perché la fonte è diretta ma l'estrazione dal PDF è degradata; resta più affidabile la scheda sulle garanzie climatiche dell'Eurosistema.",
-    "Il reportage BBC sull'Ecuador è fresco e diretto, ma non supera il valore strategico delle storie geopolitiche live su incendi europei, guerra Stati Uniti-Iran e corridoio militare del Caspio.",
-    "Antares resta già in edizione come storia forte su venture capital, piccoli reattori e infrastruttura militare; il nuovo candidato conferma la validità della scheda senza richiedere riscrittura.",
-    "La continuità editoriale viene preservata senza tenere storie obsolete per inerzia: il blocco attuale mantiene varietà tra clima, conflitti, mercati, startup, intelligenza artificiale e finanza europea."
+    "Alle 13:00 l'edizione resta a 8 storie dopo l'analisi di 155 fonti e 6 candidati: una sola sostituzione migliora freschezza e rilevanza senza alterare lo schema frontend.",
+    "La BBC sul terremoto in Giappone entra perché è una fonte diretta, pubblicata alle 12:44, e supera per urgenza la scheda sugli incendi vicini a Bordeaux.",
+    "Le tre varianti Google da Galaxy Unpacked restano escluse perché la scheda su Gemini nei nuovi Galaxy è già presente e copre il tema senza ridondanza.",
+    "Il discorso BCE di Philip Lane resta escluso perché la fonte è diretta ma l'estrazione dal PDF è degradata; la scheda sulle garanzie climatiche dell'Eurosistema resta più affidabile.",
+    "Antares resta già in edizione come storia forte su venture capital, piccoli reattori e infrastruttura militare; il candidato conferma la scelta senza richiedere duplicazioni.",
+    "La continuità viene preservata sulle storie ancora solide: Caspio, guerra Stati Uniti-Iran, difesa nei mercati, Cursor, Antares, Gemini e garanzie climatiche BCE."
   ],
   "mostViewed": [
-    "Nuove ondate di caldo spingono gli incendi verso Bordeaux",
+    "Un forte terremoto in Giappone intrappola persone in un centro commerciale",
     "Cursor punta sull'India con un abbonamento locale da 649 rupie",
     "Kyiv colpisce nel Caspio e lega più strettamente le guerre di Ucraina e Iran"
   ],
@@ -22,7 +22,7 @@
     },
     {
       "label": "Cadenza",
-      "value": "Aggiornamento ogni ora, 11:00 ora dell'Europa centrale"
+      "value": "Aggiornamento ogni ora, 13:00 ora dell'Europa centrale"
     },
     {
       "label": "Modalità",
