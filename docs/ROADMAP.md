@@ -1,6 +1,6 @@
-# AION NEXUS Roadmap
+# Altair Nexus Roadmap
 
-AION NEXUS deve crescere come prodotto editoriale leggero: prima una homepage forte e pubblicabile, poi automazione, poi strumenti interni.
+Altair Nexus deve crescere come prodotto editoriale leggero: prima una homepage forte e pubblicabile, poi automazione, poi strumenti interni.
 
 ## Current state
 - static-first MVP in `site/`

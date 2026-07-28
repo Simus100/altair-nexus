@@ -1,6 +1,6 @@
-# AION NEXUS — GitHub Publish Guide
+# Altair Nexus — GitHub Publish Guide
 
-Questa guida serve a pubblicare **tutto il codice reperibile** del progetto AION NEXUS su GitHub, senza perdere lo stato attuale.
+Questa guida serve a pubblicare **tutto il codice reperibile** del progetto Altair Nexus su GitHub, senza perdere lo stato attuale.
 
 ## Obiettivo
 Pubblicare su GitHub il progetto presente in:
@@ -39,7 +39,7 @@ Valuta con attenzione se escludere:
 - file di memoria personali del workspace OpenClaw
 - file non appartenenti davvero al progetto
 
-Il repository GitHub dovrebbe contenere **solo il progetto AION NEXUS**, non l'intero workspace personale.
+Il repository GitHub dovrebbe contenere **solo il progetto Altair Nexus**, non l'intero workspace personale.
 
 ## Verifica locale del progetto
 Dal root del progetto:
@@ -59,7 +59,7 @@ http://localhost:4173/site/
 ### Opzione web
 1. Vai su GitHub
 2. Clicca **New repository**
-3. Nome consigliato: `aion-nexus`
+3. Nome consigliato: `altair-nexus`
 4. Scegli visibilità: `Private` o `Public`
 5. Non aggiungere README/.gitignore/license se vuoi spingere lo stato locale senza conflitti iniziali
 6. Crea il repository
@@ -69,13 +69,13 @@ Dentro il progetto:
 
 ```bash
 cd /root/.openclaw/workspace/aion-nexus
-git remote add origin git@github.com:TUO-USERNAME/aion-nexus.git
+git remote add origin git@github.com:TUO-USERNAME/altair-nexus.git
 ```
 
 Oppure HTTPS:
 
 ```bash
-git remote add origin https://github.com/TUO-USERNAME/aion-nexus.git
+git remote add origin https://github.com/TUO-USERNAME/altair-nexus.git
 ```
 
 Verifica:
@@ -94,14 +94,14 @@ Se ci sono modifiche locali che vuoi includere, fai commit.
 ## Commit dello stato corrente
 ```bash
 git add README.md data site docs scripts
-git commit -m "Snapshot current AION NEXUS state"
+git commit -m "Snapshot current Altair Nexus state"
 ```
 
 Se vuoi includere tutto il progetto tracciato:
 
 ```bash
 git add .
-git commit -m "Publish AION NEXUS current project state"
+git commit -m "Publish Altair Nexus current project state"
 ```
 
 ## Push iniziale su GitHub
@@ -124,7 +124,7 @@ Puoi ricostruire il repository dal bundle backup:
 ```bash
 git clone /root/.openclaw/workspace/backups/aion-nexus-full-20260319-210013/repo.bundle aion-nexus-restored
 cd aion-nexus-restored
-git remote add origin git@github.com:TUO-USERNAME/aion-nexus.git
+git remote add origin git@github.com:TUO-USERNAME/altair-nexus.git
 git push -u origin master
 ```
 
@@ -161,4 +161,4 @@ Se nel progetto nasceranno output temporanei, aggiungili qui.
 - pagina GitHub verificata
 
 ## Nota pratica
-Dato che il progetto vive dentro un workspace OpenClaw più ampio, il consiglio giusto è mantenere il repository GitHub limitato alla cartella `aion-nexus/` e non al workspace intero.
+Dato che il progetto vive dentro un workspace OpenClaw più ampio, il consiglio giusto è mantenere il repository GitHub limitato alla cartella operativa del progetto e non al workspace intero. La directory locale può restare `aion-nexus/` per compatibilità con service e automazioni, anche se il repository pubblico si chiama `altair-nexus`.

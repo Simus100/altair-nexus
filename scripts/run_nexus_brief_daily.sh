@@ -17,4 +17,7 @@ if [[ -n "${GEMINI_API_KEY:-}" ]]; then
 else
   echo 'GEMINI_API_KEY missing; generated page only'
 fi
+python3 scripts/generate_story_pages.py
+python3 scripts/generate_ai_crawl_files.py
 python3 scripts/generate_sitemap.py
+python3 scripts/validate_public_urls.py

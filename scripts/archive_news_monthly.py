@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 import json
 import pathlib
+import re
 from datetime import datetime
 
 ROOT = pathlib.Path('/root/.openclaw/workspace/aion-nexus')
@@ -8,6 +9,7 @@ NEWS_PATH = ROOT / 'data' / 'news.json'
 CATEGORIES_PATH = ROOT / 'data' / 'categories.json'
 HISTORY_DIR = ROOT / 'data' / 'history'
 INDEX_PATH = HISTORY_DIR / 'index.json'
+MONTH_KEY_RE = re.compile(r'^\d{4}-\d{2}$')
 
 
 def load_json(path, default=None):
@@ -41,6 +43,10 @@ def month_label(key):
     dt = datetime.strptime(key, '%Y-%m')
     month_names = ['gennaio', 'febbraio', 'marzo', 'aprile', 'maggio', 'giugno', 'luglio', 'agosto', 'settembre', 'ottobre', 'novembre', 'dicembre']
     return f"{month_names[dt.month - 1]} {dt.year}"
+
+
+def valid_month_key(key):
+    return bool(MONTH_KEY_RE.match(key))
 
 
 def main():
@@ -78,6 +84,8 @@ def main():
         if path.name == 'index.json':
             continue
         key = path.stem
+        if not valid_month_key(key):
+            continue
         items = load_json(path, [])
         for entry in items:
             story_id = entry.get('id')

@@ -1,10 +1,10 @@
 # REFRESH_GUARDRAILS.md
 
-Guida operativa per evitare regressioni nel motore editoriale di AION NEXUS.
+Guida operativa per evitare regressioni nel motore editoriale di Altair Nexus.
 
 ## Scopo del sito
 
-AION NEXUS non è un aggregatore pieno di slot.
+Altair Nexus non è un aggregatore pieno di slot.
 Deve:
 - selezionare poco
 - evitare cloni narrativi

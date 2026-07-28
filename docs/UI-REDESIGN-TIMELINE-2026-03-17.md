@@ -1,4 +1,4 @@
-# AION NEXUS — Premium UI Redesign Timeline
+# Altair Nexus — Premium UI Redesign Timeline
 
 ## Objective
 Portare l'interfaccia da MVP credibile a homepage editoriale premium, mantenendo responsività, chiarezza e stabilità.

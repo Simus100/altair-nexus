@@ -1,4 +1,4 @@
-# AION NEXUS MVP Architecture
+# Altair Nexus MVP Architecture
 
 ## Why static-first
 A static-first MVP reduces complexity while preserving a clean path to automation.

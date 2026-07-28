@@ -1,6 +1,6 @@
 # DYNAMIC_CATEGORY_NOVELTY_PLAN.md
 
-Piano tecnico per rendere AION NEXUS più dinamico nel riconoscere novità vere per categoria, senza aumentare rumore, cloni o regressioni.
+Piano tecnico per rendere Altair Nexus più dinamico nel riconoscere novità vere per categoria, senza aumentare rumore, cloni o regressioni.
 
 ## Obiettivo
 

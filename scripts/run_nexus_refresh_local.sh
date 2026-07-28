@@ -5,7 +5,9 @@ python3 scripts/refresh_edition_stable.py
 python3 scripts/generate_story_pages.py
 python3 scripts/generate_aion_brief_page.py
 python3 scripts/enhance_report_seo.py
+python3 scripts/generate_ai_crawl_files.py
 python3 scripts/generate_sitemap.py
+python3 scripts/validate_public_urls.py
 python3 - <<'PY'
 import json, hashlib
 from pathlib import Path

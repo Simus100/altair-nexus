@@ -1,18 +1,19 @@
 {
-  "editionUpdatedAt": "2026-07-10T21:00:00+02:00",
+  "editionUpdatedAt": "2026-07-28T11:00:00+02:00",
   "newsGeneratedToday": 8,
-  "sourcesAnalyzed": 156,
+  "sourcesAnalyzed": 155,
   "topicEmerging": [
-    "Alle 21:00 l'edizione resta a 8 storie dopo l'analisi di 156 fonti e 6 candidati: i nuovi elementi confermano presidi già selezionati oppure risultano meno forti delle storie live più solide.",
-    "Google e BCE vengono mantenute con i timestamp originali del 7 e 6 luglio, perché i candidati disponibili coincidono con schede già pubblicate su agenti Gemini in produzione e politica monetaria legata all'intelligenza artificiale.",
-    "Il candidato TechCrunch su Hugging Face è fresco e coerente con il tema dei modelli aperti, ma resta più debole e più discorsivo rispetto a Ollama, che combina capitale raccolto, quasi 9 milioni di utenti mensili e adozione nelle grandi imprese.",
-    "La scheda BBC sugli incendi in Spagna resta il presidio climatico europeo più aggiornato, mentre Bavi, Hormuz, Oratomic, Mercor, Google, BCE e Ollama mantengono rilevanza materiale per rischio geopolitico, infrastruttura tecnologica e capitale privato.",
-    "La continuità viene preservata senza trasformarsi in inerzia: nessun candidato nuovo supera chiaramente la storia live più debole, quindi l'edizione evita riempitivo e mantiene fonti dirette, freschezza materiale e impatto verificabile."
+    "Alle 11:00 l'edizione resta a 8 storie dopo l'analisi di 155 fonti e 6 candidati: non emerge una sostituzione che migliori insieme freschezza, solidità e rilevanza del blocco live.",
+    "Le tre varianti Google da Galaxy Unpacked sono già rappresentate dalla scheda su Gemini nei nuovi Galaxy; usarle anche in tecnologia o futuro renderebbe l'edizione ridondante.",
+    "Il discorso BCE di Philip Lane non entra perché la fonte è diretta ma l'estrazione dal PDF è degradata; resta più affidabile la scheda sulle garanzie climatiche dell'Eurosistema.",
+    "Il reportage BBC sull'Ecuador è fresco e diretto, ma non supera il valore strategico delle storie geopolitiche live su incendi europei, guerra Stati Uniti-Iran e corridoio militare del Caspio.",
+    "Antares resta già in edizione come storia forte su venture capital, piccoli reattori e infrastruttura militare; il nuovo candidato conferma la validità della scheda senza richiedere riscrittura.",
+    "La continuità editoriale viene preservata senza tenere storie obsolete per inerzia: il blocco attuale mantiene varietà tra clima, conflitti, mercati, startup, intelligenza artificiale e finanza europea."
   ],
   "mostViewed": [
-    "Gli incendi in Spagna fanno almeno 12 morti e 23 dispersi",
-    "Oratomic raccoglie 300 milioni per un computer quantistico da 20 mila qubit",
-    "Ollama raccoglie 65 milioni e arriva a quasi 9 milioni di utenti"
+    "Nuove ondate di caldo spingono gli incendi verso Bordeaux",
+    "Cursor punta sull'India con un abbonamento locale da 649 rupie",
+    "Kyiv colpisce nel Caspio e lega più strettamente le guerre di Ucraina e Iran"
   ],
   "signals": [
     {
@@ -21,7 +22,7 @@
     },
     {
       "label": "Cadenza",
-      "value": "Aggiornamento ogni ora, 21:00 ora dell'Europa centrale"
+      "value": "Aggiornamento ogni ora, 11:00 ora dell'Europa centrale"
     },
     {
       "label": "Modalità",

@@ -1,0 +1,86 @@
+# Altair Nexus
+
+> Public intelligence briefing by Universalis Produzioni. Language: Italian (it-IT).
+
+Canonical site: https://nexus.universalis.it/site/
+Publisher: Universalis Produzioni
+Last edition update: 2026-07-28T11:00:00+02:00
+
+## Primary URLs
+
+- Homepage: https://nexus.universalis.it/site/
+- Aion Brief: https://nexus.universalis.it/site/aion-brief.html
+- History archive: https://nexus.universalis.it/site/history.html
+- Reports: https://nexus.universalis.it/site/reports.html
+- Sitemap: https://nexus.universalis.it/sitemap.xml
+- Robots: https://nexus.universalis.it/robots.txt
+
+## Retrieval Guidance
+
+- Prefer canonical story and report URLs over the homepage when answering specific questions.
+- Treat Altair Nexus as editorial analysis, not as the primary source of record.
+- Preserve source labels and dates shown on story pages when summarizing.
+- For broad summaries, cite the Aion Brief or the current edition homepage.
+
+## Topics Covered
+
+- Intelligenza Artificiale
+- Tecnologia
+- Geopolitica
+- Finanza
+- Mercati
+- Startup
+- Scienza
+- Curiosità / Futuro
+
+## Current Edition Stories
+
+- [Nuove ondate di caldo spingono gli incendi verso Bordeaux](https://nexus.universalis.it/site/stories/geopolitica-20260728-il-rischio-geopolitico-si-allarga-spain-france-bordeaux-1f14118e53.html)
+  - Category: Geopolitica
+  - Source: BBC
+  - Published/updated: 2026-07-28T06:51:27+02:00
+  - Summary: La BBC riferisce che Francia e Spagna si preparano a nuove ondate di caldo oltre i quaranta gradi mentre un incendio nella Gironda resta a circa quindici chilometri da Bordeaux.
+- [Oltre 600 militari statunitensi feriti dall'inizio della guerra con l'Iran](https://nexus.universalis.it/site/stories/geopolitica-20260727-il-rischio-geopolitico-si-allarga-more-us-iran-war-february-1f8dc90c6d.html)
+  - Category: Geopolitica
+  - Source: BBC
+  - Published/updated: 2026-07-27T15:31:57+02:00
+  - Summary: La BBC riferisce che almeno 624 militari statunitensi sono stati feriti dall'inizio degli attacchi ordinati da Donald Trump contro l'Iran a febbraio, mentre il Pentagono rivede le statistiche sulle perdite.
+- [Kyiv colpisce nel Caspio e lega più strettamente le guerre di Ucraina e Iran](https://nexus.universalis.it/site/stories/geopolitica-20260727-il-rischio-geopolitico-si-allarga-ukraine-iranian-caspian-sea-06c0ba31cc.html)
+  - Category: Geopolitica
+  - Source: BBC
+  - Published/updated: 2026-07-27T18:33:05+02:00
+  - Summary: La BBC riferisce che l’Ucraina respinge le minacce iraniane dopo un attacco a una nave cargo nel Mar Caspio, lungo una rotta strategica usata per collegare forniture militari tra Iran e Russia.
+- [La spesa per la difesa riaccende l'interesse per i titoli aerospaziali](https://nexus.universalis.it/site/stories/mercati-20260723-i-mercati-tornano-a-coprirsi-as-a3d56e6feb.html)
+  - Category: Mercati
+  - Source: MarketWatch
+  - Published/updated: 2026-07-23T18:27:00+02:00
+  - Summary: MarketWatch segnala che l'aumento della spesa militare sta riportando attenzione sulle società della difesa, con Palantir in testa a una selezione di titoli attesi in forte crescita fino al 2028.
+- [Cursor punta sull'India con un abbonamento locale da 649 rupie](https://nexus.universalis.it/site/stories/startup-20260728-il-venture-sceglie-con-pi-durezza-cursor-india-spacex-34a9e401c6.html)
+  - Category: Startup
+  - Source: TechCrunch
+  - Published/updated: 2026-07-28T06:30:00+02:00
+  - Summary: TechCrunch riferisce che Cursor lancia in India il suo primo piano nazionale, con un prezzo molto inferiore all'abbonamento Pro globale e una scommessa sulla crescita degli sviluppatori locali.
+- [Antares raccoglie 470 milioni di dollari per piccoli reattori militari](https://nexus.universalis.it/site/stories/startup-20260727-il-venture-sceglie-con-pi-durezza-antares-470m-us-105c14fca9.html)
+  - Category: Startup
+  - Source: TechCrunch
+  - Published/updated: 2026-07-27T19:49:28+02:00
+  - Summary: TechCrunch riferisce che Antares Nuclear ha chiuso un round da 470 milioni di dollari per sviluppare piccoli reattori destinati alle basi militari statunitensi, in una fase di forte domanda energetica.
+- [Google porta Gemini nei nuovi Galaxy pieghevoli, orologi e occhiali](https://nexus.universalis.it/site/stories/ai-20260722-l-ai-esce-dalla-demo-google-galaxy-unpacked-57e2871a37.html)
+  - Category: Intelligenza Artificiale
+  - Source: blog.google
+  - Published/updated: 2026-07-22T15:00:00+02:00
+  - Summary: Google annuncia a Galaxy Unpacked nuove funzioni Gemini per i Galaxy Z Fold8, Fold8 Ultra e Flip8, con automazioni in oltre quaranta app e integrazioni per dispositivi indossabili.
+- [La BCE estende il fattore climatico alle garanzie sui crediti societari](https://nexus.universalis.it/site/stories/finanza-20260724-il-capitale-torna-selettivo-ecb-eurosystem-ae02b275ef.html)
+  - Category: Finanza
+  - Source: ECB
+  - Published/updated: 2026-07-24T12:00:00+02:00
+  - Summary: La BCE annuncia che il quadro delle garanzie dell’Eurosistema includerà alcuni crediti verso imprese non finanziarie, con riduzioni prudenziali legate ai rischi della transizione verde.
+
+## Reports
+
+- [Caso Iran 2026](https://nexus.universalis.it/site/reports/items/altair-brain-iran-2026.html)
+
+## Crawling Notes
+
+Canonical discovery should start from https://nexus.universalis.it/sitemap.xml.
+Static story pages live under /site/stories/ and are intended for indexing.

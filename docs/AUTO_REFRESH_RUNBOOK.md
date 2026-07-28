@@ -1,4 +1,4 @@
-# AION NEXUS — Auto-refresh runbook
+# Altair Nexus — Auto-refresh runbook
 
 ## Goal
 Rebuild `aion-nexus/data/news.json` and `aion-nexus/data/stats.json` every hour as a fresh edition with new, source-backed, Italian-language briefing content while preserving the current frontend schema.

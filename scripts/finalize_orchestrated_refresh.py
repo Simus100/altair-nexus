@@ -2,6 +2,7 @@
 import argparse
 import json
 import os
+import re
 import shutil
 import subprocess
 import sys
@@ -19,12 +20,15 @@ CATEGORIES = DATA / 'categories.json'
 NEWS_TMP = DATA / 'news.json.tmp'
 STATS_TMP = DATA / 'stats.json.tmp'
 VALIDATOR = ROOT / 'scripts' / 'validate_nexus_json.py'
+PUBLIC_URL_VALIDATOR = ROOT / 'scripts' / 'validate_public_urls.py'
 GENERATE_STORIES = ROOT / 'scripts' / 'generate_story_pages.py'
 GENERATE_SITEMAP = ROOT / 'scripts' / 'generate_sitemap.py'
 GENERATE_BRIEF = ROOT / 'scripts' / 'generate_aion_brief_page.py'
 ENHANCE_REPORT_SEO = ROOT / 'scripts' / 'enhance_report_seo.py'
+GENERATE_AI_CRAWL = ROOT / 'scripts' / 'generate_ai_crawl_files.py'
 BACKUP_DIR = TMP / 'orchestrated-refresh-backups'
 BUNDLE_SNAPSHOTS_DIR = TMP / 'editorial-bundle-snapshots'
+MONTH_KEY_RE = re.compile(r'^\d{4}-\d{2}$')
 
 
 def fail(message: str) -> None:
@@ -52,6 +56,10 @@ def archive_month_for(item: dict) -> str:
     if not timestamp:
         fail(f'news item without timestamp cannot be archived: {item.get("id") or item.get("title") or "<unknown>"}')
     return datetime.fromisoformat(timestamp).strftime('%Y-%m')
+
+
+def valid_month_key(key: str) -> bool:
+    return bool(MONTH_KEY_RE.match(key))
 
 
 def history_primary_key(item: dict) -> str | None:
@@ -103,7 +111,14 @@ def load_history_months() -> dict[str, list[dict]]:
         if path.name == 'index.json':
             continue
         payload = load_json(path)
-        months[path.stem] = payload if isinstance(payload, list) else []
+        items = payload if isinstance(payload, list) else []
+        if valid_month_key(path.stem):
+            months.setdefault(path.stem, []).extend(items)
+            continue
+        for item in items:
+            if not isinstance(item, dict) or not item.get('timestamp'):
+                continue
+            months.setdefault(archive_month_for(item), []).append(item)
     return months
 
 
@@ -225,8 +240,26 @@ def make_backup() -> Path:
     return target
 
 
+def restore_live_data(backup_dir: Path) -> None:
+    shutil.copy2(backup_dir / 'news.json', NEWS)
+    shutil.copy2(backup_dir / 'stats.json', STATS)
+
+
 def run_checked(cmd: list[str]) -> None:
     subprocess.check_call(cmd)
+
+
+def regenerate_public_site(skip_brief_page: bool) -> None:
+    run_checked(['python3', str(GENERATE_STORIES)])
+    if ENHANCE_REPORT_SEO.exists():
+        run_checked(['python3', str(ENHANCE_REPORT_SEO)])
+    if GENERATE_BRIEF.exists() and not skip_brief_page:
+        run_checked(['python3', str(GENERATE_BRIEF)])
+    if GENERATE_AI_CRAWL.exists():
+        run_checked(['python3', str(GENERATE_AI_CRAWL)])
+    run_checked(['python3', str(GENERATE_SITEMAP)])
+    if PUBLIC_URL_VALIDATOR.exists():
+        run_checked(['python3', str(PUBLIC_URL_VALIDATOR)])
 
 
 def snapshot_bundle(bundle_path: Path) -> Path:
@@ -286,14 +319,17 @@ def main() -> None:
     backup_dir = make_backup()
     os.replace(NEWS_TMP, NEWS)
     os.replace(STATS_TMP, STATS)
-    history_result = archive_published_news(news)
 
-    run_checked(['python3', str(GENERATE_STORIES)])
-    if ENHANCE_REPORT_SEO.exists():
-        run_checked(['python3', str(ENHANCE_REPORT_SEO)])
-    if GENERATE_BRIEF.exists() and not args.skip_brief_page:
-        run_checked(['python3', str(GENERATE_BRIEF)])
-    run_checked(['python3', str(GENERATE_SITEMAP)])
+    try:
+        history_result = archive_published_news(news)
+        regenerate_public_site(args.skip_brief_page)
+    except Exception:
+        restore_live_data(backup_dir)
+        try:
+            regenerate_public_site(args.skip_brief_page)
+        except Exception as restore_error:
+            print(f'rollback regeneration failed: {restore_error}', file=sys.stderr)
+        raise
 
     live_news = load_json(NEWS)
     live_stats = load_json(STATS)

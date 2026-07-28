@@ -126,7 +126,7 @@ def generate_editorial_content(signal, scenario, source_label):
         if idx == 0:
             body_parts.append(f"{para} Sul piano editoriale, il punto è capire perché questa mossa conti oltre la singola headline.")
         elif idx == 1:
-            body_parts.append(f"{para} Per AION NEXUS, il valore sta nel leggere l'impatto industriale, politico o finanziario che la notizia può trascinare.")
+            body_parts.append(f"{para} Per Altair Nexus, il valore sta nel leggere l'impatto industriale, politico o finanziario che la notizia può trascinare.")
         else:
             body_parts.append(f"{para} La chiave è se questo segnale resti episodico oppure inizi a cambiare aspettative, allocazione di capitale o comportamento degli attori coinvolti.")
     body = '\n\n'.join(body_parts)

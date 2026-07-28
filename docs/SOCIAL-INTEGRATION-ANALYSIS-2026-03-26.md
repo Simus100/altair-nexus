@@ -1,12 +1,12 @@
-# AION NEXUS — Analisi tecnica integrazione social
+# Altair Nexus — Analisi tecnica integrazione social
 
 Data: 2026-03-26
 
 ## Obiettivo
-Valutare come integrare un sistema di condivisione delle notizie sui social dentro AION NEXUS senza snaturare l'architettura attuale e mantenendo il progetto facilmente ripristinabile in caso di problemi.
+Valutare come integrare un sistema di condivisione delle notizie sui social dentro Altair Nexus senza snaturare l'architettura attuale e mantenendo il progetto facilmente ripristinabile in caso di problemi.
 
 ## Sintesi esecutiva
-AION NEXUS è già in una buona posizione per diventare un prodotto editoriale multi-canale.
+Altair Nexus è già in una buona posizione per diventare un prodotto editoriale multi-canale.
 
 Il progetto è oggi:
 - static-first
@@ -96,7 +96,7 @@ Per la fase iniziale questo è ideale:
 
 ### 4. C'è già una componente visual/editoriale
 L'immagine del brief e il tono del prodotto aiutano a costruire un'identità social coerente.
-AION NEXUS non parte da zero come “lista di link”: parte già come prodotto editoriale.
+Altair Nexus non parte da zero come “lista di link”: parte già come prodotto editoriale.
 
 ## Limiti attuali
 
@@ -193,7 +193,7 @@ Contro:
 - serve generazione file a ogni refresh
 
 ### Valutazione
-Per AION NEXUS conviene partire da **Opzione A** e pianificare **Opzione B** come evoluzione naturale.
+Per Altair Nexus conviene partire da **Opzione A** e pianificare **Opzione B** come evoluzione naturale.
 
 ## Livello 3 — Social publishing ops
 Terzo obiettivo: usare il contenuto per distribuire notizie fuori dal sito.
@@ -311,7 +311,7 @@ Ogni modifica al layer social deve essere:
 Questo consente di ripristinare rapidamente lo stato corrente del workshop se necessario.
 
 ## Conclusione
-Sì, integrare la condivisione social in AION NEXUS è non solo possibile, ma coerente con la struttura del progetto.
+Sì, integrare la condivisione social in Altair Nexus è non solo possibile, ma coerente con la struttura del progetto.
 
 La base tecnica è già buona.
 Il punto non è “se si può fare”, ma **in quale ordine farlo senza rompere ciò che già funziona**.
@@ -323,4 +323,4 @@ L'ordine corretto è:
 4. costruire un layer di generazione bozze
 5. solo dopo valutare pubblicazione semi-automatica
 
-Questa strada mantiene AION NEXUS leggero, editoriale e recuperabile.
+Questa strada mantiene Altair Nexus leggero, editoriale e recuperabile.

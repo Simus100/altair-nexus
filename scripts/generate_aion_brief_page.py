@@ -40,7 +40,15 @@ def clean_public_hook(text: str, source_label: str = '') -> str:
             flags=re.IGNORECASE,
         ).strip()
     cleaned = re.sub(r'^(Secondo|In un(?:a)?\s+analisi(?:\s+di)?)\s+', '', cleaned, flags=re.IGNORECASE).strip()
+    cleaned = normalize_public_brand(cleaned)
     return cleaned[:1].upper() + cleaned[1:] if cleaned else ''
+
+
+def normalize_public_brand(text: str) -> str:
+    text = str(text or '')
+    text = re.sub(r'\bAION\s+NEXUS\b', 'Altair Nexus', text, flags=re.IGNORECASE)
+    text = re.sub(r'\bAion\s+Nexus\b', 'Altair Nexus', text, flags=re.IGNORECASE)
+    return text
 
 
 def main():
@@ -52,7 +60,7 @@ def main():
     top = sorted_news[:3]
     latest = sorted(news, key=lambda x: x.get('timestamp') or '', reverse=True)[0] if news else None
     lead = top[0] if top else None
-    lead_category = categories.get(lead.get('category'), lead.get('category')) if lead else 'AION NEXUS'
+    lead_category = categories.get(lead.get('category'), lead.get('category')) if lead else 'Altair Nexus'
     score_spread = [x.get('qualityScore') or 0 for x in top]
     strong_execution_theme = 'Esecuzione operativa e distribuzione' if any(score >= 90 for score in score_spread) else 'Riposizionamento competitivo'
     watchpoint = 'Trasferimento del rischio geopolitico su energia e mercati' if len(top) > 1 and top[1].get('category') == 'geopolitica' else 'Capacità di trasformare annuncio in adozione reale'
@@ -61,13 +69,13 @@ def main():
     summary = (
         "Le storie più forti di oggi hanno un filo comune: contano meno come episodi isolati e di più come segnali di un equilibrio che si sta spostando. "
         "Il baricentro passa dall'effetto novità alla capacità di integrare tecnologie, asset industriali e distribuzione in flussi operativi concreti. "
-        f"Letti insieme, {top[0]['title'] if len(top) > 0 else 'il tema principale'}, {top[1]['title'] if len(top) > 1 else 'il secondo segnale'} e {top[2]['title'] if len(top) > 2 else 'il terzo fronte'} raccontano un mercato che premia esecuzione, presidio dei colli di bottiglia e velocità di messa a terra più dei semplici annunci."
+        f"Letti insieme, {normalize_public_brand(top[0]['title']) if len(top) > 0 else 'il tema principale'}, {normalize_public_brand(top[1]['title']) if len(top) > 1 else 'il secondo segnale'} e {normalize_public_brand(top[2]['title']) if len(top) > 2 else 'il terzo fronte'} raccontano un mercato che premia esecuzione, presidio dei colli di bottiglia e velocità di messa a terra più dei semplici annunci."
     ) if top else 'Sintesi del giorno in aggiornamento.'
 
     related = ''.join(
         f'''<a class="related-card" href="./stories/{html.escape(item['id'])}.html">'''
         f'''<span class="related-kicker">{html.escape(categories.get(item.get('category'), item.get('category','')))}</span>'''
-        f'''<strong>{html.escape(item.get('title',''))}</strong>'''
+        f'''<strong>{html.escape(normalize_public_brand(item.get('title','')))}</strong>'''
         f'''<span>{html.escape(clean_public_hook(item.get('hook',''), item.get('sourceLabel','')))}</span></a>'''
         for item in top
     )
@@ -77,19 +85,19 @@ def main():
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Aion Brief — Sintesi del giorno — AION NEXUS</title>
+    <title>Aion Brief — Sintesi del giorno — Altair Nexus</title>
     <meta name="description" content="{html.escape(summary[:280])}" />
     <meta name="robots" content="index,follow" />
-    <meta property="og:site_name" content="AION NEXUS" />
+    <meta property="og:site_name" content="Altair Nexus" />
     <meta property="og:type" content="article" />
     <meta property="og:locale" content="it_IT" />
-    <meta property="og:title" content="Aion Brief — Sintesi del giorno — AION NEXUS" />
+    <meta property="og:title" content="Aion Brief — Sintesi del giorno — Altair Nexus" />
     <meta property="og:description" content="{html.escape(summary[:280])}" />
     <meta property="og:url" content="{SITE_URL}/site/aion-brief.html" />
     <meta property="og:image" content="{IMAGE}" />
     <meta property="og:image:alt" content="Visual editoriale dell'Aion Brief" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Aion Brief — Sintesi del giorno — AION NEXUS" />
+    <meta name="twitter:title" content="Aion Brief — Sintesi del giorno — Altair Nexus" />
     <meta name="twitter:description" content="{html.escape(summary[:280])}" />
     <meta name="twitter:image" content="{IMAGE}" />
     <link rel="canonical" href="{SITE_URL}/site/aion-brief.html" />
@@ -119,7 +127,7 @@ def main():
     <div class="background-glow glow-b"></div>
     <header class="topbar container">
       <div class="brand-block">
-        <div class="brand-mark">AION NEXUS</div>
+        <div class="brand-mark">Altair Nexus</div>
         <div class="brand-sub">Automation Intelligence by Universalis Produzioni</div>
       </div>
       <nav class="topnav">

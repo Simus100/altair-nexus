@@ -11,7 +11,7 @@ cp data/news.json "$handoff_dir/live-news.snapshot.json"
 cp data/stats.json "$handoff_dir/live-stats.snapshot.json"
 
 cat > "$handoff_dir/README.md" <<'EOF'
-# AION NEXUS — orchestrated refresh handoff
+# Altair Nexus — orchestrated refresh handoff
 
 Questo handoff serve quando la selezione/discovery dei candidati è automatica, ma la scrittura editoriale finale viene fatta da Aion/OpenClaw in chat.
 

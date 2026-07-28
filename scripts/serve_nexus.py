@@ -15,8 +15,8 @@ ROOT_INDEX = """<!doctype html>
     <meta charset=\"UTF-8\" />
     <meta http-equiv=\"refresh\" content=\"0; url=/site/\" />
     <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />
-    <title>AION NEXUS</title>
-    <meta name=\"description\" content=\"Reindirizzamento alla homepage pubblica di AION NEXUS.\" />
+    <title>Altair Nexus</title>
+    <meta name=\"description\" content=\"Reindirizzamento alla homepage pubblica di Altair Nexus.\" />
     <link rel=\"canonical\" href=\"/site/\" />
     <style>
       body { margin: 0; min-height: 100vh; display: grid; place-items: center; background: #0b1220; color: #e8eef8; font-family: Inter, system-ui, sans-serif; }
@@ -26,7 +26,7 @@ ROOT_INDEX = """<!doctype html>
   </head>
   <body>
     <div class=\"card\">
-      <h1>AION NEXUS</h1>
+      <h1>Altair Nexus</h1>
       <p>Ti sto portando alla homepage pubblica del progetto.</p>
       <p>Se il reindirizzamento non parte da solo, apri <a href=\"/site/\">/site/</a>.</p>
       <p>Area tecnica: <a href=\"/administration/\">/administration/</a></p>
@@ -53,7 +53,7 @@ class NexusHandler(SimpleHTTPRequestHandler):
             return ROOT
         return candidate
 
-    def _serve_public_path(self, rel_path: str):
+    def _serve_public_path(self, rel_path: str, send_body: bool = True):
         target = self._safe_join(rel_path)
         if self._is_hidden_path(target.relative_to(ROOT).as_posix()):
             self.send_error(404, 'File not found')
@@ -77,7 +77,28 @@ class NexusHandler(SimpleHTTPRequestHandler):
         self.send_header('Content-Type', content_type)
         self.send_header('Content-Length', str(len(data)))
         self.end_headers()
-        self.wfile.write(data)
+        if send_body:
+            self.wfile.write(data)
+
+    def _redirect_to_site(self, path: str):
+        target = f'/site{path}'
+        self.send_response(308)
+        self.send_header('Location', target)
+        self.send_header('Content-Length', '0')
+        self.end_headers()
+
+    def _canonical_site_alias(self, path: str) -> bool:
+        return (
+            path == '/stories'
+            or path.startswith('/stories/')
+            or path == '/assets'
+            or path.startswith('/assets/')
+            or path == '/history.html'
+            or path == '/aion-brief.html'
+            or path == '/reports.html'
+            or path == '/reports'
+            or path.startswith('/reports/')
+        )
 
     def _admin_listing(self, fs_path: Path, request_path: str):
         try:
@@ -106,7 +127,7 @@ class NexusHandler(SimpleHTTPRequestHandler):
   <head>
     <meta charset=\"UTF-8\" />
     <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" />
-    <title>AION NEXUS Administration</title>
+    <title>Altair Nexus Administration</title>
     <style>
       body {{ margin: 0; padding: 32px; background: #0b1220; color: #e8eef8; font-family: Inter, system-ui, sans-serif; }}
       .wrap {{ max-width: 980px; margin: 0 auto; }}
@@ -156,6 +177,14 @@ class NexusHandler(SimpleHTTPRequestHandler):
             self.wfile.write(encoded)
             return
 
+        if path in {'/robots.txt', '/sitemap.xml', '/llms.txt'}:
+            self._serve_public_path(f'site{path}')
+            return
+
+        if self._canonical_site_alias(path):
+            self._redirect_to_site(path)
+            return
+
         if path.startswith('/administration'):
             if not self._is_local_admin_request():
                 self.send_error(403, 'Forbidden')
@@ -190,6 +219,43 @@ class NexusHandler(SimpleHTTPRequestHandler):
         self._serve_public_path(rel_path)
         return
 
+    def do_HEAD(self):
+        parsed = urlparse(self.path)
+        path = unquote(parsed.path)
+
+        if path == '/':
+            encoded = ROOT_INDEX.encode('utf-8')
+            self.send_response(200)
+            self.send_header('Content-Type', 'text/html; charset=utf-8')
+            self.send_header('Content-Length', str(len(encoded)))
+            self.end_headers()
+            return
+
+        if path in {'/robots.txt', '/sitemap.xml', '/llms.txt'}:
+            self._serve_public_path(f'site{path}', send_body=False)
+            return
+
+        if self._canonical_site_alias(path):
+            self._redirect_to_site(path)
+            return
+
+        if self._is_hidden_path(path):
+            self.send_error(404, 'File not found')
+            return
+
+        if not (
+            path == '/site'
+            or path.startswith('/site/')
+            or path == '/data'
+            or path.startswith('/data/')
+        ):
+            self.send_error(404, 'File not found')
+            return
+
+        rel_path = path.lstrip('/')
+        self._serve_public_path(rel_path, send_body=False)
+        return
+
     def translate_path(self, path):
         parsed = urlparse(path)
         cleaned = unquote(parsed.path).lstrip('/')
@@ -201,7 +267,7 @@ class NexusHandler(SimpleHTTPRequestHandler):
 def main():
     port = int(os.environ.get('PORT', '8766'))
     server = ThreadingHTTPServer(('127.0.0.1', port), NexusHandler)
-    print(f'AION NEXUS server listening on http://127.0.0.1:{port}', flush=True)
+    print(f'Altair Nexus server listening on http://127.0.0.1:{port}', flush=True)
     server.serve_forever()
 
 

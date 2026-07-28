@@ -1,4 +1,4 @@
-# AION NEXUS — Story pages statiche
+# Altair Nexus — Story pages statiche
 
 Data: 2026-03-26
 

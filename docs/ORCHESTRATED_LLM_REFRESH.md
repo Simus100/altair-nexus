@@ -1,4 +1,4 @@
-# AION NEXUS — Orchestrated LLM refresh
+# Altair Nexus — Orchestrated LLM refresh
 
 ## Obiettivo
 Tenere stabile il discovery automatico già esistente, ma spostare la scrittura editoriale finale su Aion/OpenClaw in chat, senza invocare API LLM esterne da Python.

@@ -1,9 +1,9 @@
-# AION NEXUS — Roadmap integrazione social
+# Altair Nexus — Roadmap integrazione social
 
 Data: 2026-03-26
 
 ## Obiettivo
-Introdurre capacità di condivisione e distribuzione social in AION NEXUS in modo progressivo, controllato e ripristinabile.
+Introdurre capacità di condivisione e distribuzione social in Altair Nexus in modo progressivo, controllato e ripristinabile.
 
 ## Principio guida
 Prima rendere il sito **condivisibile bene**.

@@ -1,4 +1,4 @@
-# AION NEXUS — Rollback Guide
+# Altair Nexus — Rollback Guide
 
 ## Obiettivo
 Ripristinare rapidamente il progetto in caso di regressioni durante lavori su frontend, contenuti o integrazione social.

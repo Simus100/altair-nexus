@@ -1,6 +1,6 @@
-# ALTAIR NEXUS
+# Altair Nexus
 
-**ALTAIR NEXUS is the public intelligence layer of Universalis Produzioni: a static-first editorial platform that transforms fast-moving signals across AI, technology, geopolitics, markets, startups, finance, and science into a clear, navigable, high-signal briefing experience.**
+**Altair Nexus is the public intelligence layer of Universalis Produzioni: a static-first editorial platform that transforms fast-moving signals across AI, technology, geopolitics, markets, startups, finance, and science into a clear, navigable, high-signal briefing experience.**
 
 It is designed for people and organizations that need more than a news feed: executives, founders, analysts, creators, operators, and decision-makers who want context, continuity, prioritization, and a readable map of what is changing.
 
@@ -12,11 +12,11 @@ https://nexus.universalis.it/site/
 
 ## Strategic Positioning
 
-ALTAIR NEXUS is a frontier editorial intelligence product. It combines automated collection, structured analysis, static publishing, long-form AI-generated reports, persistent archives, SEO-ready public pages, and a branded editorial interface.
+Altair Nexus is a frontier editorial intelligence product. It combines automated collection, structured analysis, static publishing, long-form AI-generated reports, persistent archives, SEO-ready public pages, and a branded editorial interface.
 
 The product vision is simple: turn information overload into an operating surface for strategic awareness.
 
-Instead of presenting isolated headlines, AION NEXUS organizes signals into a coherent daily and historical intelligence system. Each edition is built to answer practical questions:
+Instead of presenting isolated headlines, Altair Nexus organizes signals into a coherent daily and historical intelligence system. Each edition is built to answer practical questions:
 
 - What is materially changing?
 - Which signals are noise, and which deserve attention?
@@ -25,7 +25,7 @@ Instead of presenting isolated headlines, AION NEXUS organizes signals into a co
 
 ## What It Delivers
 
-ALTAIR NEXUS provides a public, lightweight, fast-loading intelligence experience with:
+Altair Nexus provides a public, lightweight, fast-loading intelligence experience with:
 
 - a curated homepage for the current editorial briefing;
 - an `Aion Brief` page for the synthetic daily reading;
@@ -40,7 +40,7 @@ ALTAIR NEXUS provides a public, lightweight, fast-loading intelligence experienc
 
 The internet produces infinite updates. Strategic users need selection, framing, and memory.
 
-ALTAIR NEXUS is built around that gap. It preserves the advantages of automation while maintaining an editorial layer that privileges relevance, continuity, and legibility. The system can refresh quickly, but its purpose is not velocity alone: it is to make change understandable.
+Altair Nexus is built around that gap. It preserves the advantages of automation while maintaining an editorial layer that privileges relevance, continuity, and legibility. The system can refresh quickly, but its purpose is not velocity alone: it is to make change understandable.
 
 Commercially, the project can support:
 
@@ -66,7 +66,7 @@ The interface is intentionally static-first: fast to serve, easy to cache, robus
 
 ## Editorial Domains
 
-ALTAIR NEXUS tracks high-impact domains where technological, economic, and geopolitical change converge:
+Altair Nexus tracks high-impact domains where technological, economic, and geopolitical change converge:
 
 - artificial intelligence and frontier model ecosystems;
 - enterprise software, cloud, semiconductors, robotics, and infrastructure;
@@ -100,7 +100,7 @@ The project uses a pragmatic static-first architecture. Generated data and pages
 
 ## How The System Works
 
-ALTAIR NEXUS separates the intelligence workflow into four layers:
+Altair Nexus separates the intelligence workflow into four layers:
 
 1. **Data layer**: JSON files under `data/` hold the current edition, statistics, categories, and historical archives.
 2. **Generation layer**: Python scripts under `scripts/` refresh the edition, validate data, build story pages, create the Aion Brief page, enrich report metadata, and regenerate the sitemap.
